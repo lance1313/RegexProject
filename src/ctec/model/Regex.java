@@ -46,7 +46,7 @@ Email: valid email address
 	
 	public static boolean validateFirstName(String FName) {
 		//validate phone numbers of format "1234567890"
-		if (FName.matches("\\d{2,30}")) return true;
+		if (FName.matches("^[a-z ,.'-]+$/i")) return true;
 		//validating phone number with -, . or spaces
 		else if(FName.matches("\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}")) return true;
 		
@@ -56,7 +56,7 @@ Email: valid email address
 	
 	public static boolean validateLastName(String LName) {
 		//validate phone numbers of format "1234567890"
-		if (LName.matches("\\d{10}")) return true;
+		if (LName.matches("\b[A-Z0-9._%+-]+@[A-Z0-9.-]")) return true;
 		//validating phone number with -, . or spaces
 		else if(LName.matches("\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}")) return true;
 		
